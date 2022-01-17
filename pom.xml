@@ -52,12 +52,16 @@
       <scope>provided</scope>
     </dependency  -->
 <!-- https://mvnrepository.com/artifact/org.apache.tomee/javaee-api -->
+
+<!--
 <dependency>
     <groupId>org.apache.tomee</groupId>
     <artifactId>javaee-api</artifactId>
     <version>7.0-2</version>
     <scope>provided</scope>
 </dependency>
+-->
+
 
     <!-- to test with TomEE and Arquillian
     <dependency>
@@ -100,6 +104,11 @@
       <scope>test</scope>
     </dependency>
     -->
+    <dependency>
+      <groupId>org.apache.tomee</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>8.0-5</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -125,7 +134,8 @@
       <plugin>
         <groupId>org.apache.tomee.maven</groupId>
         <artifactId>tomee-maven-plugin</artifactId>
-        <version>7.1.4</version>
+     <!--   <version>7.1.4</version>  -->
+        <version>8.0.8</version>
         <configuration>
           <context>ROOT</context>
            <tomeeClassifier>plume</tomeeClassifier>

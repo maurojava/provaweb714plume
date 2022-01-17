@@ -23,12 +23,14 @@ and open the template in the editor.
                     
                     // Get the form fields and store them in an object
                     var book = {"title":$('#txtTitle').val(), "author":$('#txtAuthor').val()};
-                    
+                    var bookjson= JSON.stringify(book);
+                    alert("the book in json format is : "+bookjson);
                     // Send the JSON string of book to the POST method of the web service
                     $.ajax({
                         url: "/webresources/book",
                         method: "POST",
-                        data: JSON.stringify(book),
+                       // data: JSON.stringify(book),
+                       data: bookjson,
                         contentType: "application/json; charset=utf-8",
                         processData: false,
                         success: function () {
